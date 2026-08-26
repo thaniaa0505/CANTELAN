@@ -1,0 +1,169 @@
+import 'package:flutter/material.dart';
+
+export '../views/filter_view.dart';
+
+class AppFilterColors {
+  AppFilterColors._();
+
+  static const Color surface = Color(0xFFFFFFFF);
+  static const Color background = Color(0xFFFAFAFA);
+  static const Color primary = Color(0xFF111827);
+  static const Color secondary = Color(0xFF6B7280);
+  static const Color accent = Color(0xFFBDA389);
+  static const Color accentLight = Color(0xFFFAF6F2);
+  static const Color cardBg = Color(0xFFFAF9F8);
+  static const Color border = Color(0xFFE5E7EB);
+  static const Color shadow = Color(0x0D000000);
+}
+
+class CategoryFilterItem {
+  final String id;
+  final String name;
+  final IconData icon;
+
+  const CategoryFilterItem({
+    required this.id,
+    required this.name,
+    required this.icon,
+  });
+}
+
+class PopularFilterItem {
+  final String title;
+  final String itemCount;
+  final String imageUrl;
+
+  const PopularFilterItem({
+    required this.title,
+    required this.itemCount,
+    required this.imageUrl,
+  });
+}
+
+class AppFilterData {
+  AppFilterData._();
+
+  static const List<CategoryFilterItem> categories = [
+    CategoryFilterItem(
+      id: 'tops',
+      name: 'Tops',
+      icon: Icons.checkroom_rounded,
+    ),
+    CategoryFilterItem(
+      id: 'bottoms',
+      name: 'Bottoms',
+      icon: Icons.dry_cleaning_rounded,
+    ),
+    CategoryFilterItem(
+      id: 'outer',
+      name: 'Outer',
+      icon: Icons.layers_outlined,
+    ),
+    CategoryFilterItem(
+      id: 'dresses',
+      name: 'Dresses',
+      icon: Icons.woman_rounded,
+    ),
+    CategoryFilterItem(
+      id: 'shoes',
+      name: 'Shoes',
+      icon: Icons.roller_skating_outlined,
+    ),
+    CategoryFilterItem(
+      id: 'accessories',
+      name: 'Accessories',
+      icon: Icons.watch_outlined,
+    ),
+  ];
+
+  static const List<Color> colors = [
+    Color(0xFF111111),
+    Color(0xFFFFFFFF),
+    Color(0xFFEEEADD),
+    Color(0xFFB89B88),
+    Color(0xFF9F5B31),
+    Color(0xFF5F845A),
+    Color(0xFFF6A071),
+    Color(0xFFCBA3E5),
+    Color(0xFF8FB8F0),
+    Color(0xFFFDC9DF),
+  ];
+
+  static const List<String> brands = [
+    'All Brand',
+    'Zara',
+    'Uniqlo',
+    'H&M',
+    'Mango',
+    'Gucci',
+  ];
+
+  static const List<String> sizes = [
+    'All Size',
+    'XS',
+    'S',
+    'M',
+    'L',
+    'XL',
+    'XXL',
+  ];
+
+  static const List<String> seasons = [
+    'All Season',
+    'Spring',
+    'Summer',
+    'Autumn',
+    'Winter',
+  ];
+
+  static const List<String> tags = [
+    'Casual',
+    'Formal',
+    'Party',
+    'Travel',
+    'Minimalist',
+    'Elegant',
+    'Sporty',
+    'Vintage',
+    'Chic',
+  ];
+
+  static const List<String> materials = [
+    'Cotton',
+    'Linen',
+    'Denim',
+    'Wool',
+    'Leather',
+    'Silk',
+    'Polyester',
+    'Knit',
+    'Others',
+  ];
+
+  static const List<PopularFilterItem> popularFilters = [
+    PopularFilterItem(
+      title: 'Daily Essentials',
+      itemCount: '120 items',
+      imageUrl:
+          'https://lh3.googleusercontent.com/aida-public/AB6AXuD01oXAek6e3tGa3ry1R2btzt1WgHGFg2VhIWMuaKjYPJGcZtXLBy2kRzwWyH71o2fAMwj38wshZ0FGb-pmEu8rKHn3OMJVB3EW1-OzXK1Xx_nP1wjX8hiUIQNz9_5d7UBjrONC_DCtVtCUtRUHDqzt_SlPAifaXTsUOujTd9H4FoisdvzxyGS9feLfIh7JFjVt3PEYBe1gl4Suw3RE_TSX2KxeSIBisHMd3nJZ5TJj1d9WBrrCS6v0Ng',
+    ),
+    PopularFilterItem(
+      title: 'Minimalist Look',
+      itemCount: '86 items',
+      imageUrl:
+          'https://lh3.googleusercontent.com/aida-public/AB6AXuDTsxjb1auNzrt2cSjwSwaQ4TN_YlO-Q2Xxdb2hgal8YW6bJlSRdz_o71V_u2v5FgqHpQiK6g65QtF5Z0JcnykqJ_5OsaJ4x6IK1heUBI6BIw9NfA9bHPC7iEZelCWBwx8NQT0ocJ8V_dyfGDTvegW53vMERltP-ksO0KVfL5s968CLDIDDeEo33TJ7nUP7SxoJlLu1gRqDmPGO2gfwA7UVVKHi6cQBlC0_Mxpl_xf0rkiAC2KfmgvaLg',
+    ),
+    PopularFilterItem(
+      title: 'Office Wear',
+      itemCount: '64 items',
+      imageUrl:
+          'https://lh3.googleusercontent.com/aida-public/AB6AXuBm2IHlqPPeOp1dw6RUPunRVUEVAgGMt4To3az11oLPVfRspJG4EukKlXDDYOkpL-Xumt3njHU9TQM0N5F8T46B5Oopyz2czTyQAD6RRul12m4SsKduHRaVrjaCpLQSvtdhztgl07ABhIIogB3rl4CAi44cm-JKoDcA38XdcMfA04i-1Aa0Z6prvAI3BN6s0SYN7lQ_r0Y-SO64PjQeVS_-Rr6tDpaZhTb6EFJaSg0yFEuFpD1neReKuQ',
+    ),
+    PopularFilterItem(
+      title: 'Weekend Style',
+      itemCount: '98 items',
+      imageUrl:
+          'https://lh3.googleusercontent.com/aida-public/AB6AXuAmDK_cJN9gGfHK5-ob4RU8OhmarbqhU0JmJahiMkok_0tcMZe1cF63ItoZBTigOXP3VIORQR-D-kQy6HkJL2GbYTNdvSvQRX5Lu14ulY4KON_gWAzb63VdtBIm62K-Yt72H7OAv2q2398OSD2-0iC0Bo1UF_CwxsI_90zHLyR-lbUf78-6rWvBbDvl9-va_PXzi8t_nsr7H_vgIlV_9GAi6UxkE47FrGcHtafJT4YrGaq7VZz8Y6kQ2g',
+    ),
+  ];
+}
